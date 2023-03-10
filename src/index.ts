@@ -41,9 +41,8 @@ app.on("activate", () => {
 // This method will be called when Electron has finished initialization
 app.whenReady().then(() => {
 	createWindow();
-});
-
-// Register a keyboard shortcut to quit the app
-globalShortcut.register("CommandOrControl+Q+W+E", () => {
-	app.quit();
+	// Register a keyboard shortcut to quit the app
+	globalShortcut.register("Command+Q", () => {
+		app.quit();
+	});
 });
